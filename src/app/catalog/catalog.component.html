@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="filters">
+      <a class="button" (click)="filter='Phone'">Phone</a>
+      <a class="button" (click)="filter='TV'">TV</a>
+      <a class="button" (click)="filter='Tablet'">Tablet</a>
+      <a class="button" (click)="filter='Laptop'">Laptop</a>
+      <a class="button" (click)="filter=''">All</a>
+    </div>
+  
+    <div class="products">
+      <article class="product-item" *ngFor="let device of getFiltredDevices()">
+       <app-device-details [device]="device" ></app-device-details>
+      </article>
+    </div>
+  </div>
