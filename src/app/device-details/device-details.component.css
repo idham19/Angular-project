@@ -4,3 +4,50 @@ img{
     border-radius: 20px;
 
 }
+
+
+.device-details{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+button{
+    position: absolute;
+    border: 1px solid;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 0.5rem;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    bottom: 0%;
+    left:40%;
+   
+    visibility: hidden;
+    transition: all 0.4s;
+    cursor: pointer;
+    transform: scale(1);
+
+}
+button:hover{
+    color:rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+.device-details:hover button{
+    visibility: visible;
+    transform: scale(2.1);
+    /* background-color: rgb(62, 144, 144); */
+}
+.discount {
+    margin-top: -10px;
+    color: #d25ca1;
+    font-size: 1.3rem;
+  }
+  .strikethrough {
+    text-decoration: line-through;
+    font-size: 18px;
+  }
+  .price{
+    font-size: 1.3rem;
+    font-weight: bold;
+  }

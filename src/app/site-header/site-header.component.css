@@ -1,21 +1,28 @@
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     font-size: 24px;
     margin-bottom: 10px;
     margin: -3px -8px 0 -8px;
     padding: 0 8px 5px 8px;
-    border-bottom: 2px solid #818285;
+    border-bottom: 0.2px solid #818285;
+    background-color: rgb(29, 28, 28);
+    box-shadow: 0 0.9rem 0.5rem rgba(0,0,0,0.2);
+    /* width: 100vw; */
+    color: white;
+    padding: 1rem;
   }
   
   .left {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   
-  .left * {
+  /* .left * {
     margin-right: 25px;
-  }
+  } */
   
   .logo {
     height: 65px;
@@ -45,11 +52,11 @@
     margin: auto;
   }
   
-  .right {
+  /* .right {
     display: flex;
     align-items: center;
     margin-right: 25px;
-  }
+  } */
   
   .right * {
     margin-left: 25px;
@@ -65,3 +72,15 @@
     top: 60px;
     right: 30px;
   }
+  a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Optional: Makes the link take the text color of its parent */
+    transition: all 0.4s;
+  }
+  a:hover{
+    font-size: 18px;
+    transform: scale(1.02);
+    border: solid rgb(104, 178, 196) 3px;
+    padding: 12px;
+    border-radius: 15%;
+}

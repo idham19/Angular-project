@@ -1,0 +1,42 @@
+<div class="container">
+  <h1 class="header">Your Cart</h1>
+
+  <!-- Show this message if the cart is empty -->
+  <div class="empty-cart" *ngIf="cartItems.length === 0">
+    You have no items in your cart
+  </div>
+
+  <!-- Show the cart list if there are items in the cart -->
+  <ul class="cart" *ngIf="cartItems.length > 0">
+    <li class="cart-item" *ngFor="let device of cartItems">
+      <div class="product">
+        <div class="product-details">
+          <img [src]="getImageUrl(device)" [alt]="device.model" />
+          <div class="product-info">
+            <div class="name">{{ device.model }}</div>
+            <div class="description">{{ device.brand }}</div>
+          </div>
+        </div>
+        <div class="price">
+          <!-- If the device has a discount, show the original price as strikethrough -->
+          <div [ngClass]="{ strikethrough: device.discount > 0 }">
+            {{ device.price | currency : "USD" }}
+          </div>
+
+          <!-- Show the discounted price if there's a discount -->
+          <div *ngIf="device.discount > 0" class="discount">
+            {{ (device.price  - device.discount) | currency : "USD" }}
+          </div>
+
+          <!-- Remove button -->
+          <button (click)="removeFromCart(device)">Remove</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Show the total cost of all items in the cart -->
+  <div class="total">
+    Total: {{ cartTotal | currency : "USD" }}
+  </div>
+</div>

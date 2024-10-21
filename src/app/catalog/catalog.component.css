@@ -8,15 +8,15 @@
   justify-content: space-between;
   padding: 2rem;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: bold;
   transition: all 0.4s;
   border-radius: 15px;
 }
 .filters:hover{
-    background-color: rgb(232, 248, 216);
-    color: black;
+    background-color: rgb(21, 21, 21);
+    color: rgb(255, 255, 255);
 }
 a{
     transition: all 0.4s;
@@ -25,9 +25,9 @@ a{
 a:hover{
     font-size: 18px;
     transform: scale(1.02);
-    border: solid rgb(9, 147, 181) 3px;
-    padding: 10px;
-    border-radius: 5%;
+    border: solid rgb(104, 178, 196) 3px;
+    padding: 12px;
+    border-radius: 15%;
 }
 .products {
   display: flex;
@@ -54,9 +54,8 @@ article {
 }
 article:hover {
   background-color: beige;
+  /* background-color: rgb(128, 128, 94); */
   transform: scale(1.02);
-  .add__icon {
-    visibility: visible;
-    transform: scale(2.2);
-  }
+  border: solid 0.5px rgb(0, 0, 0);
+
 }

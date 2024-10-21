@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +17,13 @@ import { CatalogComponent } from './catalog/catalog.component';
     HomeComponent,
     SiteHeaderComponent,
     DeviceDetailsComponent,
-    CatalogComponent
+    CatalogComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

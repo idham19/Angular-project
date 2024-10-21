@@ -1,0 +1,63 @@
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: rgb(24, 24, 24);
+margin: 0;
+}
+
+.phone {
+    background-image: url("../../assets/images/phone.jpg");
+    width: 100%; /* Container width */
+    height: 50vh; /* Full viewport height */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border-bottom: solid white 5px;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+  .phone-button{
+    visibility: hidden;
+    cursor: pointer;
+
+  }
+  .phone:hover {
+    transform: scale(1.01);
+  }
+  .phone:hover .phone-button {
+    transform: scale(1.01);
+    visibility: visible;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+
+.tabletAndLaptops {
+    display: flex; /* Align images side by side */
+    justify-content: space-between; /* Add space between images if needed */
+  }
+  
+  .side-by-side-img {
+    width: 45%; /* Ensure both images are the same width, adjusting if needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the allocated space without distortion */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius:15px ;
+    border: solid white 5px;
+  }
+
+
+.laptops{
+
+}
+
+.tv img{
+    width: 100%;
+  border-top: solid  white 5px;
+}
